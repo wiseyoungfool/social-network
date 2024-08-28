@@ -1,0 +1,18 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+    {% if user.is_authenticated %}
+    <div id="new-post">
+        <h3>New Post</h3>
+            <textarea  type="text" id="new-post-content" placeholder="What's on your mind?" cols="50" rows="5"></textarea><br>
+            <input type="submit" id="submit-post" class="btn btn-primary" value="Post">
+    </div>
+    {% endif %}
+    <div id="posts-view">
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'network/post.js' %}"></script>
+{% endblock %}

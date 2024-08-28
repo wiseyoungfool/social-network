@@ -1,0 +1,23 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <div class="profile-header">
+        <h1>{{ user.username }}</h1>
+        <h4><strong>Following:</strong> <span id="following-count">{{ following }}</span>  |
+        <strong>Followers:</strong> <span id="follower-count">{{ followers }}</span></h4>
+        {% if user.is_authenticated and user != current_user %}
+            {% if is_following %}
+            <button id="follow-btn" class="btn btn-danger" data-following="true" data-username="{{ user.username }}" style="margin: 20px">Unfollow</button>
+            {% else %}
+            <button id="follow-btn" class="btn btn-primary" data-following="false" data-username="{{ user.username }}" style="margin: 20px">Follow</button>
+            {% endif %}
+        {% endif %}
+    </div>
+    <div id="posts-view">
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'network/post.js' %}"></script>
+{% endblock %}

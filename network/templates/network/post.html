@@ -1,0 +1,19 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <div id="main-post"></div>
+    </div>
+    <div id="new-post">
+        <h3>Add Reply</h3>
+            <textarea  type="text" id="new-reply-content" placeholder="What's on your mind?" cols="50" rows="5"></textarea><br>
+            <input type="submit" id="submit-reply" class="btn btn-primary" value="Reply">
+    </div>
+    <div id="comments-view">
+        <h3 style='text-align: center;'>Comments</h3>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'network/post.js' %}"></script>
+{% endblock %}

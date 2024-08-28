@@ -1,0 +1,42 @@
+#new-post {
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px solid blue;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.edit-post {
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: row;
+}
+
+.post {
+    text-align: center:
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px solid blue;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.profile-header {
+    text-align: center:
+    padding: 50px;
+    margin: 50px auto;
+    border: 1px solid blue;
+    max-width: 600px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+}
+
+.button-area {
+    display: flex;
+    flex-direction: row;
+}
